@@ -1,5 +1,7 @@
 package ru.lyashenko.ClientWithCars.model;
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
@@ -8,6 +10,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "clients")
+@AllArgsConstructor
 public class Client extends AbstractBaseModel {
 
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "client")

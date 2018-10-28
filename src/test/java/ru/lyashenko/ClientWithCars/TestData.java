@@ -13,6 +13,8 @@ public class TestData {
     public static final Client CLIENT_3_CREATE = new Client("Fedya", LocalDate.of(2005,01,17));
     public static final Client CLIENT_2 = new Client("Tanya", LocalDate.of(1994,12,25));
     public static final Client CLIENT_1_DELETE = new Client("Genya", LocalDate.of(1989,01,22));
+    public static final Client CLIENT_4 = new Client("Lusi", LocalDate.of(2018,06,07));
+    public static final Client CLIENT_5= new Client("RuSoft", LocalDate.of(2005,05,11));
 
     public static final Auto AUTO = new Auto("Mercedes",LocalDate.of(2014,12,23));
 

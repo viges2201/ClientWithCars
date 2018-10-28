@@ -1,6 +1,7 @@
 package ru.lyashenko.ClientWithCars.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "autos")
+@AllArgsConstructor
 public class Auto extends AbstractBaseModel {
 
     @OneToOne

@@ -1,6 +1,7 @@
 package ru.lyashenko.ClientWithCars.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -25,6 +26,7 @@ public abstract class AbstractBaseModel {
 //    @NotBlank
     @Column(name = "birthday", nullable = false)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate birthday;
 
     protected AbstractBaseModel() {
