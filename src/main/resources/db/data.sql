@@ -1,5 +1,8 @@
-DELETE FROM clients;
 DELETE FROM autos;
+DELETE FROM clients;
+ALTER TABLE clients AUTO_INCREMENT=1;
+ALTER TABLE autos AUTO_INCREMENT=1;
+
 
 INSERT INTO clients (name,birthday) VALUES ('Genya','1989-01-22');
 INSERT INTO clients (name,birthday) VALUES ('Tanya','1994-12-25');

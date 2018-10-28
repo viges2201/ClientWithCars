@@ -23,8 +23,13 @@ public class Auto extends AbstractBaseModel {
     public Auto() {
     }
 
-    public Auto(long id, String name, LocalDate date) {
+    public Auto(long id, String name, LocalDate date)
+    {
         super(id, name, date);
+    }
+
+    public Auto(String name, LocalDate date) {
+        super(null, name, date);
     }
 
     public Client getClient() {

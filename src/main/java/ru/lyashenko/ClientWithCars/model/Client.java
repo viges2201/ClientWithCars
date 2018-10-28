@@ -20,6 +20,10 @@ public class Client extends AbstractBaseModel {
         super(id, name, date);
     }
 
+    public Client(String name, LocalDate date) {
+        super(null,name,date);
+    }
+
 
     public Auto getAuto() {
         return auto;
