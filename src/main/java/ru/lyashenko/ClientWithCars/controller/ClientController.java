@@ -32,6 +32,9 @@ public class ClientController {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation("Create the clients, rent car, update auto")
+    @ApiResponses(value = {@ApiResponse(code = 201, message = "Created", response = Client.class),
+        @ApiResponse(code = 500, message = "Not find client or auto")})
     public ResponseEntity<Client> create(@RequestBody Client client){
         Client created = clientService.create(client);
 
@@ -43,6 +46,8 @@ public class ClientController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation("Get the clients with rent cars")
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "OK", response = Client.class)})
     public List<Client> list() {
         return clientRepository.findAll();
     }
@@ -57,6 +62,8 @@ public class ClientController {
 
     @DeleteMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @ApiOperation("Delete the client, update auto")
+    @ApiResponses(value = {@ApiResponse(code = 204, message = "No Content")})
     public void delete(@RequestBody Client client) {
         clientService.delete(client);
     }

@@ -19,8 +19,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
     private static final String SWAGGER_API_VERSION = "1.0";
     private static final String LICENSE_TEXT = "License";
-    private static final String title = "Products REST API";
-    private static final String description = "RESTful API for Products";
+    private static final String title = "The client rents a car REST API";
+    private static final String description = "RESTful API for clients";
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
