@@ -1,7 +1,10 @@
 package ru.lyashenko.ClientWithCars.controller;
 
 
-import javassist.NotFoundException;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("client")
+@Api(value = "ClientControllerAPI", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ClientController {
     private final ClientService clientService;
     private final CrudClientRepository clientRepository;
@@ -44,6 +48,8 @@ public class ClientController {
     }
 
     @GetMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation("Get the client with specific id")
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "OK", response = Client.class)})
     public Client getOne(@PathVariable("id") Client client) {
         return client;
     }
